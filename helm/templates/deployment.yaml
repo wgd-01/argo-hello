@@ -25,5 +25,6 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ default .Values.image.tag }}"
         name: go-hello-http
+        imagePullPolicy: IfNotPresent
         ports: 
           - containerPort: 80
